@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Box?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="689.0" prefWidth="960.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <children>
+      <Pane fx:id="panelStatus" layoutX="201.0" layoutY="14.0" prefHeight="106.0" prefWidth="759.0" style="-fx-background-color: #588ce0;">
+         <children>
+            <Label fx:id="labelStatus" alignment="BASELINE_LEFT" layoutX="22.0" layoutY="40.0" text="Department" textFill="#fcfafa">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelStatusMini" alignment="BASELINE_LEFT" layoutX="28.0" layoutY="27.0" text="/home/department" textFill="#fcfafa">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <StackPane layoutX="289.0" layoutY="181.0">
+         <children>
+
+            <GridPane fx:id="panelTeacher" prefHeight="438.0" prefWidth="582.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="439.199951171875" minHeight="0.0" prefHeight="172.40001831054687" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="446.4" minHeight="10.0" prefHeight="258.3999877929688" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Text fill="#58cee0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create/Update Teacher Profile:" wrappingWidth="251.0234375">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="210.0" />
+                     </GridPane.margin>
+                  </Text>
+                  <TextField fx:id="textFieldInsertEmployeeID" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="197.0" promptText="Please insert employee ID" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets right="80.0" />
+                     </GridPane.margin>
+                  </TextField>
+
+                  <TableView fx:id="tableViewTeacher" minHeight="-Infinity" minWidth="-Infinity" prefHeight="196.0" prefWidth="583.0" styleClass="table-view1" stylesheets="@../application/application.css" GridPane.rowIndex="1">
+
+                     <columns>
+                        <TableColumn fx:id="tableColumnTeacherID" prefWidth="67.20001220703125" text="Teacher ID" />
+                        <TableColumn fx:id="tableColumnTeacherName" prefWidth="104.0" text="Teacher Name" />
+                        <TableColumn fx:id="tableColumnTeacherTitle" minWidth="1.60003662109375" prefWidth="81.59991455078125" text="Title" />
+                        <TableColumn fx:id="tableColumnTeacherAdress" prefWidth="81.5999755859375" text="Adress" />
+                        <TableColumn fx:id="tableColumnTeachersDepartment" prefWidth="282.4000244140625" text="Department" />
+                        <TableColumn fx:id="tableColumnTeacherSalary" prefWidth="67.20001220703125" text="Hourly Rate" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+                  <Box depth="100" height="160.0" opacity="0.0" width="580.0" />
+                  <TextField fx:id="textFieldInsertTeacherName" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="197.0" promptText="Please insert teacher's name" GridPane.halignment="LEFT" GridPane.valignment="TOP" />
+
+                  <ComboBox fx:id="comboBoxTeacherTitle" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="197.0" promptText="Choose teachers title" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+
+                     <GridPane.margin>
+                        <Insets top="35.0" />
+                     </GridPane.margin>
+                  </ComboBox>
+                  <TextField fx:id="textFieldInsertTeacherAdress" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="197.0" promptText="Please insert adress" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets top="70.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField fx:id="textFieldInsertTeacherSalary" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="197.0" promptText="Please insert hourly salary" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets top="105.0" />
+                     </GridPane.margin>
+                  </TextField>
+
+                  <Button fx:id="btnCreateTeacher" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#btnCreateTeacher_Click" prefHeight="26.0" prefWidth="60.0" styleClass="button2" stylesheets="@../application/application.css" text="Create" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+
+                     <GridPane.margin>
+                        <Insets left="20.0" right="100.0" />
+                     </GridPane.margin>
+                  </Button>
+
+                  <Button fx:id="btnAddHours" mnemonicParsing="false" onAction="#btnAddHours_Click" styleClass="button2" stylesheets="@../application/application.css" text="Add Hours" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+
+                     <GridPane.margin>
+                        <Insets top="105.0" />
+                     </GridPane.margin>
+                  </Button>
+
+                  <Button fx:id="btnDeleteTeacher" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#btnRemoveTeacher_Click" prefHeight="26.0" prefWidth="60.0" styleClass="button2" stylesheets="@../application/application.css" text="Delete" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Button>
+
+                  <Button fx:id="btnUpdateTeacher" mnemonicParsing="false" onAction="#btnUpdateTeacherInfo_Click" prefHeight="26.0" prefWidth="60.0" styleClass="button2" stylesheets="@../application/application.css" text="Update" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+
+                     <GridPane.margin>
+                        <Insets left="20.0" right="100.0" top="40.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Text fill="#58cee0" strokeType="OUTSIDE" strokeWidth="0.0" text="Remove Teacher Profile:" wrappingWidth="211.92822265625">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="210.0" left="305.0" />
+                     </GridPane.margin>
+                  </Text>
+                  <ComboBox fx:id="comboBoxTeacherChooseDepartment" prefWidth="197.0" promptText="Choose Department" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets top="140.0" />
+                     </GridPane.margin>
+                  </ComboBox>
+                  <ComboBox fx:id="comboBoxTeacherAddHours" prefHeight="26.0" prefWidth="197.0" promptText="Choose teacher" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets right="80.0" top="70.0" />
+                     </GridPane.margin>
+                  </ComboBox>
+                  <ComboBox fx:id="comboBoxCourseAddHours" prefHeight="26.0" prefWidth="197.0" promptText="Choose course" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets right="80.0" top="105.0" />
+                     </GridPane.margin>
+                  </ComboBox>
+                  <TextField fx:id="textFieldInsertHoursWorked" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="197.0" promptText="Please insert hours worked" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets right="80.0" top="140.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <Label fx:id="teacherDisplayLabel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="264.0">
+                     <GridPane.margin>
+                        <Insets bottom="400.0" left="300.0" />
+                     </GridPane.margin>
+                  </Label>
+               </children>
+            </GridPane>
+            <GridPane fx:id="panelDepartment" prefHeight="438.0" prefWidth="582.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="439.199951171875" minHeight="0.0" prefHeight="172.40001831054687" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="438.40000000000003" minHeight="10.0" prefHeight="258.3999877929688" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+
+                  <TableView fx:id="tableViewDepartment" prefHeight="196.0" prefWidth="582.0" stylesheets="@../application/application.css" GridPane.rowIndex="1">
+                     <columns>
+                        <TableColumn fx:id="columnDepartmentName" prefWidth="131.20001220703125" text="Department Name" />
+                        <TableColumn fx:id="columnDepartmentAdress" prefWidth="144.800048828125" text="Department Adress" />
+                        <TableColumn fx:id="columnDepartmentBudget" minWidth="1.60003662109375" prefWidth="130.39996337890625" text="Department Budget" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+                  <TextField fx:id="insertDepartmentName" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="198.0" promptText="Please insert department name" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </TextField>
+                  <TextField fx:id="insertDepartmentAdress" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="197.0" promptText="Please insert departments adress" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets top="40.0" />
+                     </GridPane.margin>
+                  </TextField>
+
+                  <TextField fx:id="insertDepartmentBudget" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="197.0" promptText="Please insert department's budget" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" top="80.0" />
+                     </GridPane.margin>
+
+                  </TextField>
+                  <Button fx:id="btnCreateDepartment" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#btnCreateDepartment_Click" prefHeight="26.0" prefWidth="60.0" styleClass="button1" stylesheets="@../application/application.css" text="Create" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+
+                     <GridPane.margin>
+                        <Insets left="20.0" right="100.0" />
+                     </GridPane.margin>
+                  </Button>
+
+                  <Button fx:id="btnDeleteDepartment" mnemonicParsing="false" onAction="#btnDeleteDepartment_Click" prefHeight="26.0" prefWidth="60.0" styleClass="button1" stylesheets="@../application/application.css" text="Delete" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Button>
+
+                  <Button fx:id="btnUpdateDepartment" mnemonicParsing="false" onAction="#btnUpdateDepartment_Click" prefHeight="26.0" prefWidth="60.0" styleClass="button1" stylesheets="@../application/application.css" text="Update" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+
+                     <GridPane.margin>
+                        <Insets left="20.0" right="100.0" top="40.0" />
+                     </GridPane.margin>
+                  </Button>
+
+                  <TextField fx:id="insertCreatedDepartmentName" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="197.0" promptText="Please insert department name" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+
+                     <GridPane.margin>
+                        <Insets right="80.0" />
+                     </GridPane.margin>
+                  </TextField>
+
+                  <Text fill="#588ce0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create/Update Department:" wrappingWidth="203.33966064453125">
+
+                     <GridPane.margin>
+                        <Insets bottom="210.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#588ce0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delete Department:">
+
+                     <GridPane.margin>
+                        <Insets bottom="210.0" left="305.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+
+                  <Label fx:id="departmentDisplayLabel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="264.0">
+                     <GridPane.margin>
+                        <Insets bottom="400.0" left="300.0" />
+                     </GridPane.margin>
+                  </Label>
+               </children>
+               <StackPane.margin>
+                  <Insets />
+               </StackPane.margin>
+            </GridPane>
+
+            <GridPane fx:id="panelCourse" prefHeight="438.0" prefWidth="582.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="439.199951171875" minHeight="0.0" prefHeight="172.40001831054687" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="446.4" minHeight="10.0" prefHeight="258.3999877929688" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+
+                  <Box depth="100" height="135.0" opacity="0.0" width="580.0" GridPane.halignment="CENTER" GridPane.valignment="BASELINE" />
+                  <TextField fx:id="textFieldInsertCourseName" alignment="TOP_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="197.0" promptText="Please insert course name" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin></TextField>
+                  <TextField fx:id="textFieldInsertCourseCredits" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="197.0" promptText="Please Insert credits" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets top="35.0" />
+                     </GridPane.margin>
+                  </TextField>
+          <Button fx:id="btnCreateCourse" mnemonicParsing="false" onAction="#btnCreateCourse_Click" prefHeight="26.0" prefWidth="60.0" styleClass="button3" stylesheets="@../application/application.css" text="Create" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+
+                     <GridPane.margin>
+                        <Insets left="20.0" right="100.0" />
+                     </GridPane.margin>
+                  </Button>
+
+                  <Button fx:id="btnDeleteCourse" mnemonicParsing="false" onAction="#btnDeleteCourse_Click" prefHeight="26.0" prefWidth="60.0" styleClass="button3" stylesheets="@../application/application.css" text="Delete" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="btnUpdateCourse" mnemonicParsing="false" onAction="#btnUpdateCourse_Click" prefHeight="26.0" prefWidth="60.0" styleClass="button3" stylesheets="@../application/application.css" text="Update" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+
+                     <GridPane.margin>
+                        <Insets left="20.0" right="100.0" top="40.0" />
+                     </GridPane.margin>
+                  </Button>
+
+                  <TextField fx:id="textFieldInsertCourseCode" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="197.0" promptText="Please insert course code" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets right="80.0" />
+                     </GridPane.margin>
+                  </TextField>
+
+                  <Text fill="#e07158" strokeType="OUTSIDE" strokeWidth="0.0" text="Create/Update Course:">
+                     <GridPane.margin>
+                        <Insets bottom="210.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+
+                  <Text fill="#e07158" strokeType="OUTSIDE" strokeWidth="0.0" text="Delete Course:">
+
+                     <GridPane.margin>
+                        <Insets bottom="210.0" left="305.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+
+                  <ComboBox fx:id="comboBoxCourseType" prefWidth="197.0" promptText="Course Type" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets top="105.0" />
+                     </GridPane.margin>
+                  </ComboBox>
+                  <ComboBox fx:id="comboBoxResponsibleTeacher" prefHeight="26.0" prefWidth="197.0" promptText="Responsible Teacher" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets top="70.0" />
+                     </GridPane.margin>
+                  </ComboBox>
+                  <ComboBox fx:id="comboBoxCourseDepartment" prefWidth="197.0" promptText="Department" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets top="140.0" />
+                     </GridPane.margin>
+                  </ComboBox>
+                  <TableView fx:id="tableViewCourse" maxHeight="300.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="196.0" prefWidth="582.0" styleClass="table-view2" stylesheets="@../application/application.css" GridPane.rowIndex="1">
+                     <columns>
+                        <TableColumn fx:id="tableColumnCourseCode" prefWidth="67.20001220703125" text="Course Code" />
+                        <TableColumn fx:id="tableColumnCourseName" prefWidth="146.0" text="Course Name" />
+                        <TableColumn fx:id="tableColumnCourseCredits" minWidth="1.60003662109375" prefWidth="140.0" text="Credits" />
+                        <TableColumn fx:id="tableColumnCourseResponsibleTeacher" prefWidth="81.5999755859375" text="Responsible Teacher" />
+                        <TableColumn fx:id="columnCourseDepartmentName" prefWidth="75.0" text="Department" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </TableView>
+                  <Label fx:id="courseDisplayLabel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="264.0">
+                     <GridPane.margin>
+                        <Insets bottom="400.0" left="300.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <ComboBox fx:id="comboBoxTeacherAddTeacher" prefWidth="197.0" promptText="Teacher" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets right="80.0" top="105.0" />
+                     </GridPane.margin>
+                  </ComboBox>
+                  <ComboBox fx:id="comboBoxCourseAddTeacher" prefWidth="197.0" promptText="Course" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets right="80.0" top="140.0" />
+                     </GridPane.margin>
+                  </ComboBox>
+                  <Button fx:id="btnAddTeacherToCourse" mnemonicParsing="false" onAction="#btnAddTeacherToCourse_Click" prefHeight="26.0" prefWidth="60.0" styleClass="button3" stylesheets="@../application/application.css" text="Add Teacher" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets top="105.0" />
+                     </GridPane.margin>
+                  </Button>
+               </children>
+            </GridPane>
+            <Pane fx:id="panelEconomy" prefHeight="438.0" prefWidth="272.0" style="-fx-background-color: #B7F3CBFF;">
+               <children>
+                  <Button fx:id="btnReadDepartmentEconomy" layoutX="30.0" layoutY="220.0" mnemonicParsing="false" onAction="#btnReadDepartmentEconomy_Click" prefHeight="26.0" prefWidth="120.0" text="Read Department" />
+                  <Button fx:id="btnReadCourseEconomy" layoutX="250.0" layoutY="220.0" mnemonicParsing="false" onAction="#btnReadCourseEconomy_Click" prefHeight="26.0" prefWidth="120.0" text="Read Course" />
+                  <Label fx:id="departmentDisplayLabel1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="264.0" />
+                  <TextArea fx:id="resultsFromCalculation" layoutX="400.0" layoutY="40.0" prefHeight="40.0" prefWidth="150.0" />
+                  <ComboBox fx:id="comboBoxDepartmentToCalculate" layoutX="40.0" layoutY="85.0" prefHeight="25.0" prefWidth="230.0" promptText="Choose a department" />
+                  <Button fx:id="btnCalculateEconomyTop" layoutX="300.0" layoutY="45.0" mnemonicParsing="false" onAction="#btnCalculateEconomyTop_Click" styleClass="button4" stylesheets="@../application/application.css" text="Calculate">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Text layoutX="400.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Result From Calculation:" wrappingWidth="126.0419921875">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Text>
+
+                  <ComboBox fx:id="comboBoxDepartment" layoutX="40.0" layoutY="45.0" prefWidth="197.0" promptText="What would you like to calculate?" />
+                  <Text fill="#588ce0" layoutX="40.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="For Department:" wrappingWidth="88.376953125" />
+                  <Text fill="#58cee0" layoutX="40.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Calculate the cost for a certain course:" wrappingWidth="224.49755859375" />
+                  <Button fx:id="btnCalculateEconomyMiddle" layoutX="300.0" layoutY="170.0" mnemonicParsing="false" onAction="#btnCalculateCourseCost_Click" styleClass="button4" stylesheets="@../application/application.css" text="Calculate">
+
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+
+                     <GridPane.margin>
+                        <Insets bottom="210.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <TextArea fx:id="resultsFromCalculation1" layoutX="400.0" layoutY="170.0" prefHeight="40.0" prefWidth="150.0" />
+                  <Label fx:id="resultFromCalculationTop" layoutX="400.0" layoutY="40.0" prefHeight="40.0" prefWidth="150.0" />
+                  <Label fx:id="resultFromCalculationMiddle" layoutX="400.0" layoutY="170.0" prefHeight="40.0" prefWidth="150.0" />
+                  <Text layoutX="400.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Result From Calculation:" wrappingWidth="126.0419921875">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Text>
+                  <ComboBox fx:id="comboBoxCalculateCourseCost" layoutX="40.0" layoutY="170.0" prefHeight="25.0" prefWidth="230.0" promptText="Choose a course" />
+                  <Label fx:id="economyDisplayLabel" layoutX="300.0" layoutY="85.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="264.0" />
+                  <TableView fx:id="tableViewDepartmentEmployees" layoutX="30.0" layoutY="260.0" prefHeight="154.0" prefWidth="200.0">
+                    <columns>
+                      <TableColumn fx:id="tableColumnDepartmentEmployees" prefWidth="75.0" text="Department Employees" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+                  <TableView fx:id="tableViewCourseTeachers" layoutX="250.0" layoutY="260.0" prefHeight="154.0" prefWidth="200.0">
+                     <columns>
+                        <TableColumn fx:id="tableColumnCourseTeachers" prefWidth="75.0" text="Course Teachers" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+      <VBox layoutX="-2.0" layoutY="-1.0" prefHeight="689.0" prefWidth="202.0" style="-fx-background-color: #8b87ed;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane prefHeight="128.0" prefWidth="296.0">
+               <children>
+                  <Pane layoutX="1.0" layoutY="14.0" prefHeight="106.0" prefWidth="202.0" style="-fx-background-color: #4d4544;">
+                     <children>
+                        <Label alignment="BASELINE_LEFT" layoutX="13.0" layoutY="14.0" prefHeight="46.0" prefWidth="175.0" text="Contoso University" textFill="#fcfafa">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="5.0" layoutY="64.0" text="by Sons of Oracle" textFill="#f4f2f2">
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <Button fx:id="btnDepartment" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#buttonClickHandler" prefHeight="37.0" prefWidth="294.0" stylesheets="@../application/application.css" text="Department" textFill="#faf5f5">
+               <padding>
+                  <Insets left="60.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets top="100.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnTeacher" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#buttonClickHandler" prefHeight="37.0" prefWidth="294.0" stylesheets="@../application/application.css" text="Teacher" textFill="#faf5f5">
+               <padding>
+                  <Insets left="60.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets top="50.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnCourse" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#buttonClickHandler" prefHeight="37.0" prefWidth="294.0" stylesheets="@../application/application.css" text="Course" textFill="#faf5f5">
+               <VBox.margin>
+                  <Insets top="50.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <padding>
+                  <Insets left="60.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnEconomy" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#buttonClickHandler" prefHeight="26.0" prefWidth="204.0" stylesheets="@../application/application.css" text="Economy" textFill="#faf7f7">
+               <VBox.margin>
+                  <Insets top="50.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <padding>
+                  <Insets left="60.0" />
+               </padding>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

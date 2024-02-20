@@ -1,0 +1,82 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+/*Menu buttons*/
+.button
+{
+    -fx-background-color :  #8b87ed;
+}
+.button:hover
+{
+    -fx-background-color : #87abea;
+}
+.button:pressed
+{
+    -fx-background-color : #c1d3f1;
+}
+
+/*Department buttons and table view header*/
+.button1
+{
+    -fx-background-color :   #588ce0;
+}
+.button1:hover
+{
+    -fx-background-color : #799fda;
+}
+.button1:pressed
+{
+    -fx-background-color : #c1d3f1;
+}
+.table-view .column-header,
+.table-view .column-header-background .filler {
+    -fx-background-color: #588ce0;
+}
+
+/*Teacher buttons and table view header*/
+.button2
+{
+    -fx-background-color :   #58CEE0FF;
+}
+.button2:hover
+{
+    -fx-background-color : #89cbdc;
+}
+.button2:pressed
+{
+    -fx-background-color : #58CEE0FF;
+}
+.table-view1 .column-header,
+.table-view .column-header-background .filler {
+    -fx-background-color: #58CEE0FF;
+}
+
+/*Course buttons and table view header*/
+.button3
+{
+    -fx-background-color :   #E07158FF;
+}
+.button3:hover
+{
+    -fx-background-color : #d78779;
+}
+.button3:pressed
+{
+    -fx-background-color : #c1d3f1;
+}
+.table-view2 .column-header,
+.table-view .column-header-background .filler {
+    -fx-background-color: #E07158FF;
+}
+
+/*Economy buttons*/
+.button4
+{
+    -fx-background-color :   #58E085FF;
+}
+.button4:hover
+{
+    -fx-background-color : #88e1a6;
+}
+.button4:pressed
+{
+    -fx-background-color : #d0e5d6;
+}
